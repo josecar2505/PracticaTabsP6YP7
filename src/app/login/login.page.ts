@@ -28,7 +28,7 @@ export class LoginPage implements OnInit {
     var f = this.formularioLogin.value.nombre;
     var p = this.formularioLogin.value.password;
 
-    if(f == "admin" || p == "password"){
+    if(f == "admin" && p == "password"){
       // Redirigir al tab1 (reemplaza 'tab1' por el nombre de tu pestaña/tab)
       this.navCtrl.navigateRoot('tabs/tab1');
     }else{ 
