@@ -20,15 +20,19 @@ const routes: Routes = [
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
       {
-        path: '',
-        redirectTo: '/tabs/tab1',
+        path: '', // Ruta raíz para las pestañas
+        redirectTo: 'tab1', // Redirigir a la pestaña/tab 1 por defecto
         pathMatch: 'full'
       }
     ]
   },
   {
+    path: 'login',
+    loadChildren: () => import('../login/login.module').then(m => m.LoginPageModule)
+  },
+  {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: 'login', // Redirigir a la página de inicio de sesión por defecto
     pathMatch: 'full'
   }
 ];
